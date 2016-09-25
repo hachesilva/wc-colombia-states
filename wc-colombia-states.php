@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Woocommerce Colombia States
+Plugin Name: WC Colombia States
 Plugin URI:
 Description: Add Colombian states to WooCommerce
 Version: 1.0
