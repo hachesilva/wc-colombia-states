@@ -22,7 +22,15 @@ if ( ! defined( 'WPINC' ) ) {
 if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 	add_filter( 'woocommerce_states', 'wc_colombia_states' );
 
-	function wc_colombia_states( $states ) {
+	/**
+	 * Ensure that what is going to happen as a parameter is an "Array" so that it does notthrow an error, or even we could not pass anything as a parameter because the states are already defined.
+	 *
+	 * @param $states
+	 *
+	 * @return array
+	*/
+
+	function wc_colombia_states( array $states = null ) {
 		$states['CO'] = array(
 			'AMA' => 'Amazonas',
 			'ANT' => 'Antioquia',
